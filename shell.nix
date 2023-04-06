@@ -7,6 +7,7 @@ let
     setuptools
     packaging
     db-dtypes
+    matplotlib
 
     jupyter
     ipython

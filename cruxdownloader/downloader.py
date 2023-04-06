@@ -20,7 +20,7 @@ class CrUXDownloader:
 
     COUNTRY_SQL = """SELECT distinct country_code, origin, experimental.popularity.rank
         FROM `chrome-ux-report.experimental.country`
-        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000
+        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000000
         GROUP BY country_code, origin, experimental.popularity.rank
         ORDER BY country_code, experimental.popularity.rank;"""
 
@@ -98,18 +98,15 @@ class CrUXRepoManager:
         downloader = CrUXDownloader(credentials_path=credentials_path,
                 credentials_json=credentials_json)
         self._make_directories()
-        # TODO - just country for now
-        # for scope in {"global", "country"}:
-        for scope in {"country",}:
+        for scope in {"global", "country"}:
             data_directory = self._global_directory if scope == "global" else self._country_directory
             for yyyymm in self._to_fetch_YYYYMM(data_directory):
                 print("Fetching {} {}".format(scope, yyyymm))
                 filename = str(yyyymm) + ".csv"
                 results_path = os.path.join(data_directory, filename)
-                # NOTE no gzip for now
                 downloader.dump_month_to_csv(scope, yyyymm, results_path)
-                # if downloader.dump_month_to_csv(scope, yyyymm, results_path):
-                #     self._gzip(results_path)
+                if downloader.dump_month_to_csv(scope, yyyymm, results_path):
+                    self._gzip(results_path)
 
     def update_current(self, dest):
         # Global Only right now
