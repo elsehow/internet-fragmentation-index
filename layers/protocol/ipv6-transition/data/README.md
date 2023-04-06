@@ -41,7 +41,6 @@ Copy the resulting string into the cell below.
 
 
 ## Dataset format
-
 `data.csv` is a single string representing a CSV file. The CSV's columns are:
 
 - 0: Month (0-indexed; e.g., `8` is September).
@@ -49,8 +48,11 @@ Copy the resulting string into the cell below.
 - Total adoption: The proportion of all traffic connecting via IPv6, including via 6to4/Teredo.
 - Native: The proportion of all traffic connecting via native IPv6.
 
+## Limitations
+
+- This dataset comes from a survey of people requesting Google services. For places where Google services are not widely used (like China), our data may be unrepresentative of traffic originating from that place.
+
 ## Data sources & references
 
 - Data source: [Google IPv6 Adoption](https://www.google.com/intl/en/ipv6/statistics.html)
-
 - Methodology: **[Evaluating IPv6 Adoption in the Internet](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36240.pdf)**. Lorenzo Colitti, Steinar H. Gunderson, Erik Kline, and Tiziana Refice. Passive and Active Measurement: 11th International Conference, 2010.
