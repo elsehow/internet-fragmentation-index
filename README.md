@@ -23,6 +23,7 @@ Project structure:
           - Limitations
         - `[metric-name].csv`
         - `[metric-name].csv`
+        - (If required) Misc. post-processing CSVs.
         - `data/`
           - `README.md`
             - About the data source

@@ -12,15 +12,18 @@ from google.cloud import bigquery
 
 class CrUXDownloader:
 
+    # NOTE - `rank` goes up to 1000000
+    #         slows data collection + metric processing, but possible to get *lots* more data if need be
+
     GLOBAL_SQL = """SELECT distinct origin, experimental.popularity.rank
         FROM `chrome-ux-report.experimental.global`
-        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000000
+        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000
         GROUP BY origin, experimental.popularity.rank
         ORDER BY experimental.popularity.rank;"""
 
     COUNTRY_SQL = """SELECT distinct country_code, origin, experimental.popularity.rank
         FROM `chrome-ux-report.experimental.country`
-        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000000
+        WHERE yyyymm = ? AND experimental.popularity.rank <= 1000
         GROUP BY country_code, origin, experimental.popularity.rank
         ORDER BY country_code, experimental.popularity.rank;"""
 

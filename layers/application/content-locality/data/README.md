@@ -8,11 +8,13 @@ Forked From [zakird/curx-top-lists](https://github.com/zakird/crux-top-lists/).
 
 Get your [Google BigQuery admin credentials](https://www.progress.com/tutorials/jdbc/a-complete-guide-for-google-bigquery-authentication). Place the key .json in a folder (e.g., `creds`).
 
-From your nix-shell (see [[README]]),  this command fetches the top 100,000 websites both per-country and globally for all one-month periods (YYYYMM) in the dataset:
+From your nix-shell (see [[README]]),  this command fetches the top 1,000 websites both per-country and globally for all one-month periods (YYYYMM) in the dataset:
 
 ```sh
-python3 cruxdownloader data/ creds/my-bigquery-creds.json 
+python3 cruxdownloader data/ creds/[my-bigquery-creds.json] 
 ```
+
+Note: We can fetch up to the top 100,000 sites for all countries and globally. For now, I have opted not to for speed-up/data storage reasons.
 
 ## Dataset format
 
