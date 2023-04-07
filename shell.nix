@@ -11,9 +11,11 @@ let
     networkx
     pycountry
     funcy
+    plotly
 
     jupyter
     ipython
+    ipywidgets
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
 in
