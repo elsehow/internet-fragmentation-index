@@ -8,6 +8,7 @@ let
     packaging
     db-dtypes
     matplotlib
+    networkx
 
     jupyter
     ipython
