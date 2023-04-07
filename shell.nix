@@ -9,6 +9,7 @@ let
     db-dtypes
     matplotlib
     networkx
+    pycountry
 
     jupyter
     ipython
