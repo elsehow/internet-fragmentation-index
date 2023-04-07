@@ -10,6 +10,7 @@ let
     matplotlib
     networkx
     pycountry
+    funcy
 
     jupyter
     ipython
