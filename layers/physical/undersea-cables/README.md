@@ -16,6 +16,7 @@ We understand undersea cables as a network, where countries are nodes and cables
 
 ### Data limitations
 - These data do not include terrestrial cables, which hinder our ability to consider connectivity of landlocked countries.
+	-> Try integrating [ITU's terrestrial cable data](https://bbmaps.itu.int/bbmaps/)
 
 ### Metric limitations
 An important consideration in undersea cables, one not captured by our metric, is which entities own them. There is some amount of concentration when hyperscalers build and own their cable infrastructure.  For example, low fragmentation might be when subsea cables are owned and operated by multiple entities. High fragmentation might be when subsea cables are operated by a single entity.  A metric like "number of operators per km" might be a reasonable proxy.

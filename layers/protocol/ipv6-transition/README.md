@@ -13,6 +13,9 @@ If a new protocol emerges (e.g., [NewIP](https://www.internetsociety.org/resourc
 Note: Fragmentation is sometimes the least worst option. The internet needs to push through a period of fragmentation to swtich from IPv4 to IPv6; This fragmentation will, in the long-term, make the internet more stable and accessible for everyone.
 
 ## Limitations
+- These data only cover server-side stats. A more robust metric would cover operator status.
+	- -> [APNIC IPv6 stats](https://www.google.com/url?q=https://stats.labs.apnic.net/ipv6&sa=D&source=docs&ust=1681145402731986&usg=AOvVaw3lFi97EqocPXrzLNbX3syd)
+	- -> Top X websites, see if they're IPv6 enabled.
 
 ### Data limitations
 See: [[layers/protocol/ipv6-transition/data/README#Limitations]]

@@ -1,6 +1,6 @@
 # Internet Fragmentation Index
 
-## Develop
+## Run
 
 First, install the [Nix package manager](https://nixos.org/download.html).
 
@@ -10,9 +10,11 @@ Then, in the root directory:
 nix-shell shell.nix
 ```
 
-Navigate to any metric to view a README about how to replicate it.
+This will open a shell with all dependencies installed.
 
-Project structure:
+Navigate to any metric's README to see how to replicate it.
+
+## Project structure
 
 - `layers/`
   - `[layer-name]`
@@ -30,3 +32,6 @@ Project structure:
             - How to reproduce data collection
             - Limitations of the data source
             - The data themselves (space permitting)
+- `index/`
+	- `index.md`: This is the primary public-facing page.
+	- `index.ipynb`: This notebook uses metrics from `layers/` to produce assets for `index.md`.
